@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>План запуска продаж — MIROSHNIKOV (Дубай)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: #faf9f7;
+      color: #1c1c1e;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      background: linear-gradient(135deg, #1c1c1e 0%, #2a2620 60%, #3d3528 100%);
+      color: #fff;
+      padding: 72px 48px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: rgba(198, 168, 122, 0.08);
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: 18%;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: rgba(198, 168, 122, 0.05);
+    }
+    .header-inner { max-width: 1040px; margin: 0 auto; position: relative; }
+    .header-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #c6a87a;
+      margin-bottom: 14px;
+    }
+    .header h1 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+    .header h1 span { color: #c6a87a; }
+    .header-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      max-width: 720px;
+    }
+    .header-meta {
+      margin-top: 32px;
+      display: flex;
+      gap: 36px;
+      flex-wrap: wrap;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .meta-item { font-size: 12px; color: rgba(255,255,255,0.5); }
+    .meta-item strong { color: #fff; display: block; font-size: 15px; font-weight: 500; margin-top: 2px; }
+
+    /* ─── CONTENT ─── */
+    .content { max-width: 1040px; margin: 0 auto; padding: 56px 24px 80px; }
+
+    /* ─── INTRO ─── */
+    .intro {
+      background: #fff;
+      border: 1px solid #ece8e0;
+      border-radius: 16px;
+      padding: 36px 40px;
+      margin-bottom: 48px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .intro p { font-size: 16px; color: #2c2c2e; margin-bottom: 14px; }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro strong { color: #1c1c1e; }
+
+    /* ─── SECTION ─── */
+    .section { margin-bottom: 56px; }
+    .section-eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8a7e6b;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-eyebrow::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: #c6a87a;
+    }
+    .section-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1c1c1e;
+      margin-bottom: 24px;
+      letter-spacing: -0.3px;
+    }
+    .section-lead {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 28px;
+      max-width: 780px;
+    }
+
+    /* ─── ISSUE CARD ─── */
+    .issue {
+      background: #fff;
+      border: 1px solid #ece8e0;
+      border-radius: 14px;
+      padding: 26px 30px;
+      margin-bottom: 16px;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .issue:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.05); border-color: #d8d0c0; }
+    .issue-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .issue-num {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: #1c1c1e;
+      color: #c6a87a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .issue-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1c1c1e;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-left: auto;
+      text-transform: uppercase;
+    }
+    .badge-crit { background: #fbeae5; color: #b53f1d; }
+    .badge-warn { background: #fdf2dc; color: #a06f0c; }
+    .badge-info { background: #e8eef9; color: #2e5cb8; }
+    .issue-body { color: #3c3c3e; font-size: 15px; }
+    .issue-body p { margin-bottom: 12px; }
+    .issue-body p:last-child { margin-bottom: 0; }
+    .issue-body ul { margin: 8px 0 14px 8px; padding-left: 16px; }
+    .issue-body ul li { margin-bottom: 6px; }
+    .issue-body code {
+      font-family: 'SF Mono', Consolas, monospace;
+      font-size: 13px;
+      background: #f4f0e8;
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: #6e5a32;
+    }
+
+    /* ─── FIX BOX ─── */
+    .fix {
+      margin-top: 16px;
+      background: #f7f4ed;
+      border-left: 3px solid #c6a87a;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px 14px 16px;
+    }
+    .fix-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #8a6f3d;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .fix ul { list-style: none; padding: 0; margin: 0; }
+    .fix li {
+      font-size: 14px;
+      color: #2c2c2e;
+      padding: 3px 0 3px 20px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .fix li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #c6a87a;
+      font-weight: 700;
+    }
+
+    /* ─── STAGE ─── */
+    .stage {
+      background: #fff;
+      border: 1px solid #ece8e0;
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .stage-head {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f1ede4;
+    }
+    .stage-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: #c6a87a;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .stage-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1c1c1e;
+    }
+    .stage-meta {
+      margin-left: auto;
+      font-size: 12px;
+      color: #8a7e6b;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .stage-body p { font-size: 15px; color: #3c3c3e; margin-bottom: 10px; }
+    .stage-body ul { margin: 8px 0 0 8px; padding-left: 16px; }
+    .stage-body ul li { font-size: 14.5px; color: #3c3c3e; margin-bottom: 6px; }
+    .stage-body ul li strong { color: #1c1c1e; }
+    .stage-why {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #6b6256;
+      padding: 12px 16px;
+      background: #faf7f1;
+      border-radius: 8px;
+    }
+    .stage-why b { color: #8a6f3d; font-weight: 600; }
+
+    /* ─── KEYWORD GROUPS GRID ─── */
+    .kw-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 14px;
+    }
+    .kw-card {
+      background: #fff;
+      border: 1px solid #ece8e0;
+      border-radius: 12px;
+      padding: 22px 24px;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .kw-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.05); transform: translateY(-1px); }
+    .kw-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .kw-num {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #c6a87a;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .kw-tag {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      background: #f1ede4;
+      color: #6b6256;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .kw-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1c1c1e;
+      margin-bottom: 6px;
+    }
+    .kw-intent {
+      font-size: 13px;
+      color: #6b6256;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .kw-keys {
+      list-style: none;
+      padding: 0;
+      border-top: 1px solid #f1ede4;
+      padding-top: 10px;
+    }
+    .kw-keys li {
+      font-family: 'SF Mono', Consolas, monospace;
+      font-size: 12.5px;
+      color: #3c3c3e;
+      padding: 3px 0;
+    }
+
+    /* ─── LAYER ─── */
+    .layers { display: grid; gap: 12px; }
+    .layer {
+      display: flex;
+      align-items: stretch;
+      background: #fff;
+      border: 1px solid #ece8e0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .layer-num {
+      background: #1c1c1e;
+      color: #c6a87a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      font-size: 22px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .layer-body { padding: 18px 24px; }
+    .layer-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1c1c1e;
+      margin-bottom: 4px;
+    }
+    .layer-title span {
+      color: #8a7e6b;
+      font-weight: 400;
+      font-size: 13px;
+      margin-left: 10px;
+    }
+    .layer-desc { font-size: 14px; color: #555; }
+
+    /* ─── DONT BOX ─── */
+    .dont {
+      background: #fbeae5;
+      border: 1px solid #f1c8b9;
+      border-radius: 12px;
+      padding: 24px 28px;
+    }
+    .dont-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #8e2e0e;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .dont ul { margin: 0 0 12px 8px; padding-left: 16px; }
+    .dont li {
+      font-size: 14.5px;
+      color: #3c2620;
+      margin-bottom: 6px;
+    }
+    .dont p {
+      font-size: 13.5px;
+      color: #6b3f2a;
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    /* ─── AUDIENCE GRID ─── */
+    .aud-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .aud-card {
+      background: #fff;
+      border: 1px solid #ece8e0;
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .aud-head {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #c6a87a;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .aud-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1c1c1e;
+      margin-bottom: 12px;
+    }
+    .aud-card ul { list-style: none; padding: 0; }
+    .aud-card li {
+      font-family: 'SF Mono', Consolas, monospace;
+      font-size: 12.5px;
+      color: #3c3c3e;
+      padding: 2px 0;
+    }
+
+    /* ─── BUDGET ─── */
+    .budget-lead { margin-bottom: 22px; }
+    .formula {
+      background: #fff;
+      border: 1px dashed #c6a87a;
+      border-radius: 14px;
+      padding: 26px 28px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .formula-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #8a6f3d;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .formula-expr {
+      font-family: 'SF Mono', Consolas, monospace;
+      font-size: 17px;
+      color: #1c1c1e;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .formula-expr b { color: #c6a87a; font-weight: 700; }
+    .formula-note {
+      font-size: 13px;
+      color: #6b6256;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .split-card {
+      background: #fff;
+      border: 1px solid #ece8e0;
+      border-radius: 12px;
+      padding: 18px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .split-bar {
+      position: absolute;
+      left: 0; bottom: 0;
+      height: 3px;
+      background: #c6a87a;
+    }
+    .split-pct {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1c1c1e;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .split-pct span { font-size: 16px; color: #8a7e6b; font-weight: 500; }
+    .split-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1c1c1e;
+      margin-bottom: 4px;
+    }
+    .split-why {
+      font-size: 12.5px;
+      color: #6b6256;
+      line-height: 1.5;
+    }
+    .budget-notes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .budget-note {
+      background: #fff;
+      border: 1px solid #ece8e0;
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .budget-note-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #c6a87a;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .budget-note-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1c1c1e;
+      margin-bottom: 8px;
+    }
+    .budget-note p { font-size: 13.5px; color: #555; line-height: 1.55; }
+    .budget-note ul { margin: 6px 0 0 8px; padding-left: 16px; }
+    .budget-note li { font-size: 13.5px; color: #555; margin-bottom: 4px; }
+
+    /* ─── EXPECTATION ─── */
+    .expect {
+      background: linear-gradient(135deg, #1c1c1e 0%, #2a2620 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 36px 40px;
+    }
+    .expect-eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #c6a87a;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .expect h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+    .expect p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 12px;
+    }
+    .expect p strong { color: #c6a87a; font-weight: 600; }
+    .expect-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .expect-item-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: rgba(198, 168, 122, 0.7);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .expect-item-value {
+      font-size: 16px;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      text-align: center;
+      padding: 32px 24px 0;
+      color: #8a7e6b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .header { padding: 48px 24px 40px; }
+      .header h1 { font-size: 30px; }
+      .content { padding: 36px 16px 60px; }
+      .intro, .stage, .expect { padding: 24px 22px; }
+      .section-title { font-size: 22px; }
+      .layer { flex-direction: column; }
+      .layer-num { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-label">Стратегия запуска · Google Ads · UAE</div>
+    <h1>MIROSHNIKOV<br><span>план запуска продаж</span></h1>
+    <p class="header-sub">
+      Что нужно поправить на сайте, как выстроить рекламную систему и как через Google Ads
+      постепенно довести аудиторию до покупки — без распыления бюджета на холодный трафик.
+    </p>
+    <div class="header-meta">
+      <div class="meta-item">Клиент<strong>miroshnikov.ae</strong></div>
+      <div class="meta-item">Ниша<strong>Designer bags · Dubai</strong></div>
+      <div class="meta-item">Платформа<strong>Shopify</strong></div>
+      <div class="meta-item">Документ<strong>27 мая 2026</strong></div>
+    </div>
+  </div>
+</header>
+
+<main class="content">
+
+  <!-- INTRO -->
+  <div class="intro">
+    <p>
+      Чтобы выйти на продажи, важно не просто запустить рекламу, а собрать <strong>рабочую систему</strong>:
+      настроить аналитику, выстроить понятную структуру кампаний, привести на сайт именно целевую аудиторию
+      и дальше усиливать то, что реально даёт покупки.
+    </p>
+    <p>
+      Google Ads здесь — основной инструмент быстрого выхода в спрос. Через поиск забираем людей,
+      которые уже ищут похожие сумки в Дубае, через товарные кампании показываем ассортимент и цены,
+      позже через PMax и баннеры расширяем охват и возвращаем тех, кто был на сайте.
+    </p>
+    <p>
+      Важно понимать: для fashion-продукта <strong>основная часть продаж редко происходит с первого клика</strong>.
+      Человек сначала знакомится с брендом, смотрит модели, сравнивает и возвращается позже —
+      поэтому задача рекламы не только привести трафик, а довести заинтересованную аудиторию до покупки.
+    </p>
+  </div>
+
+  <!-- SECTION 1: SITE ISSUES -->
+  <section class="section">
+    <div class="section-eyebrow">Шаг 1 · Сайт</div>
+    <h2 class="section-title">Что слабое и что нужно поправить до запуска</h2>
+    <p class="section-lead">
+      Реклама усиливает то, что уже есть на сайте. Если на странице сомнения, политика возврата с заглушками
+      или ассортимент не находится поиском, рекламный клик превратится в выход. Поэтому до запуска кампаний
+      закрываем три критичных блока.
+    </p>
+
+    <!-- Issue 1 -->
+    <div class="issue">
+      <div class="issue-head">
+        <div class="issue-num">1</div>
+        <div class="issue-title">Refund policy бьёт по доверию</div>
+        <div class="badge badge-crit">критично</div>
+      </div>
+      <div class="issue-body">
+        <p>Это главный слабый блок. На странице сейчас видны прямые признаки «недоделанности»:</p>
+        <ul>
+          <li>плейсхолдер <code>[INSERT RETURN ADDRESS]</code> — текст явно не финализирован;</li>
+          <li>дублирование одного и того же абзаца;</li>
+          <li>в одной политике смешаны два почтовых адреса — <code>miroshnikov.dubai@gmail.com</code> и <code>daydesign.dubai@gmail.com</code>;</li>
+          <li>WhatsApp указан на <code>+66</code> (Таиланд) и не зарегистрирован.</li>
+        </ul>
+        <p>
+          Для премиального fashion-сегмента это сигнал «бренда нет» — особенно для пользователей из Дубая,
+          которые привыкли к стандартам уровня Ounass / Level Shoes. Решение по покупке откладывается,
+          конверсия с платного клика падает, а CPA в кабинете растёт.
+        </p>
+        <div class="fix">
+          <div class="fix-label">Что делаем</div>
+          <ul>
+            <li>Переписать политику возврата под реальный процесс (срок возврата, кто оплачивает доставку обратно, обмен/возврат денег, исключения по гигиене и распродажам).</li>
+            <li>Указать реальный адрес возврата вместо <code>[INSERT RETURN ADDRESS]</code>.</li>
+            <li>Оставить один контактный e-mail для UAE — либо <code>miroshnikov.dubai</code>, либо <code>daydesign.dubai</code>, не оба.</li>
+            <li>Зарегистрировать WhatsApp Business на номер UAE (<code>+971</code>) и поставить кликабельную кнопку в шапке/футере.</li>
+            <li>Добавить блок «Shipping &amp; Returns» в карточку каждого товара коротким абзацем — он сильно поднимает доверие именно на странице товара.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Issue 2 -->
+    <div class="issue">
+      <div class="issue-head">
+        <div class="issue-num">2</div>
+        <div class="issue-title">SEO-параметры не прописаны</div>
+        <div class="badge badge-warn">важно</div>
+      </div>
+      <div class="issue-body">
+        <p>
+          На главной заголовок страницы — просто «MIROSHNIKOV», meta description — «Miroshnikov Design Bags»,
+          H1 на главной по факту нет (есть только секционные H2 типа «ALL BAGS» / «ABOUT MIROSHNIKOV»).
+          Это значит, что:
+        </p>
+        <ul>
+          <li>Google не понимает, что вы продаёте сумки в Дубае — органика по коммерческим запросам не появится;</li>
+          <li>Качество (Quality Score) рекламных объявлений в Google Ads будет ниже, чем могло бы — выше клик, ниже позиция при той же ставке;</li>
+          <li>На вкладке Shopping и в Performance Max алгоритмы хуже подбирают релевантные показы, потому что текст карточки беден.</li>
+        </ul>
+        <p>
+          Это не «когда-нибудь потом» — это закрывается сразу, потому что напрямую влияет на стоимость
+          рекламы и LTV-канала «органика».
+        </p>
+        <div class="fix">
+          <div class="fix-label">Что делаем</div>
+          <ul>
+            <li><b>Title главной:</b> что-то вроде <code>MIROSHNIKOV — Designer Bags &amp; Handbags in Dubai</code> (50–60 символов).</li>
+            <li><b>Meta description главной:</b> 140–160 символов с УТП (минимализм / структурированный дизайн / Dubai shipping) и ключом «designer bags Dubai».</li>
+            <li><b>H1 на главной:</b> один, видимый, по сути — например, «Designer bags. Made for the Dubai woman.»</li>
+            <li><b>H1 категорий и карточек:</b> название модели + категория + Dubai (<code>Structured Shopper Bag — Designer Tote, Dubai</code>).</li>
+            <li><b>H2/H3 на карточке:</b> состав, размеры, использование (crossbody / shoulder / strap included), уход.</li>
+            <li><b>alt-тексты картинок</b> — описательные, не «IMG_4521.jpg».</li>
+            <li><b>Структурные данные Product / Offer</b> уже есть от Shopify, проверить, что цена и наличие пробрасываются корректно (это база и для Merchant Center).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Issue 3 -->
+    <div class="issue">
+      <div class="issue-head">
+        <div class="issue-num">3</div>
+        <div class="issue-title">Скорость загрузки на ПК и мобильных</div>
+        <div class="badge badge-warn">важно</div>
+      </div>
+      <div class="issue-body">
+        <p>
+          Шаблонный Shopify-сайт обычно проседает не из-за самой темы, а из-за тяжёлых изображений и стека сторонних скриптов
+          (чат, оценки, поп-апы, аналитика). На рекламном трафике из Google Ads — особенно с мобильных —
+          каждые лишние 0,5 секунды отказа стоят денег: бюджет уходит в выходы до загрузки страницы.
+        </p>
+        <div class="fix">
+          <div class="fix-label">Что проверяем и чиним</div>
+          <ul>
+            <li>Запускаем PageSpeed Insights на главной, странице категории и 2–3 карточках — фиксируем актуальные LCP / CLS / TBT для mobile и desktop.</li>
+            <li>Картинки товаров перевести в современный формат (WebP/AVIF), отдавать через <code>srcset</code>, сжать оригиналы до разумного веса (большинство hero-картинок до 200–250 KB).</li>
+            <li>Убрать неиспользуемые Shopify-приложения — каждый app добавляет JS/CSS в head.</li>
+            <li>Lazy-loading для всех картинок ниже первого экрана.</li>
+            <li>Чат и поп-апы подгружать с задержкой / после взаимодействия, а не сразу.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: STAGES -->
+  <section class="section">
+    <div class="section-eyebrow">Шаг 2 · Запуск</div>
+    <h2 class="section-title">Этапы запуска Google Ads</h2>
+    <p class="section-lead">
+      Запуск делим на 6 этапов. Первые два — подготовка, без которой кампания не управляется (нечем мерить и нечего оптимизировать).
+      Дальше — мягкий старт на узких группах, накопление данных, оптимизация и только потом расширение в PMax.
+    </p>
+
+    <!-- Stage 1 -->
+    <div class="stage">
+      <div class="stage-head">
+        <div class="stage-num">01</div>
+        <div class="stage-title">Подготовка аналитики и базы</div>
+        <div class="stage-meta">до запуска</div>
+      </div>
+      <div class="stage-body">
+        <ul>
+          <li><strong>Google Tag Manager</strong> — единая точка сбора всех тегов и событий;</li>
+          <li><strong>GA4</strong> — настройка свойства, потоков данных, базовых отчётов;</li>
+          <li><strong>Google Merchant Center</strong> — фид с Shopify, верификация домена, политика возвратов и доставки на уровне аккаунта;</li>
+          <li>проверка передачи данных по товарам (цены, наличие, GTIN/MPN, картинки);</li>
+          <li>настройка ключевых событий и конверсий:
+            <ul>
+              <li>просмотр товара (<code>view_item</code>),</li>
+              <li>добавление в корзину (<code>add_to_cart</code>),</li>
+              <li>начало оформления (<code>begin_checkout</code>),</li>
+              <li>покупка (<code>purchase</code>) с передачей <code>value</code> и <code>currency</code> — иначе кампании на ROAS работать не будут.</li>
+            </ul>
+          </li>
+          <li>связка аккаунтов: <strong>GA4 + Google Ads + Merchant Center</strong> + Shopify-Google channel.</li>
+        </ul>
+        <div class="stage-why">
+          <b>Зачем:</b> без чистой передачи конверсий и каталога весь дальнейший Google Ads — это «лить и смотреть».
+          Алгоритмы Smart Bidding и PMax обучаются на данных о покупках; чем чище сигнал, тем быстрее кампания выходит на положительный ROAS.
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 2 -->
+    <div class="stage">
+      <div class="stage-head">
+        <div class="stage-num">02</div>
+        <div class="stage-title">Подготовка рекламной структуры</div>
+        <div class="stage-meta">до запуска</div>
+      </div>
+      <div class="stage-body">
+        <ul>
+          <li>сбор и просчёт ключевых слов под рынок Дубая (английский + русский);</li>
+          <li>кластеризация запросов по категориям и типам спроса (бренд / тип сумки / use case);</li>
+          <li>оценка частотности, конкуренции и стоимости клика — отсев заведомо нерентабельных кластеров;</li>
+          <li>подбор приоритетных ключей для первого этапа запуска (Phrase / Exact);</li>
+          <li>сбор минус-слов — общий список (mens, replica, fake, cheap, used, 2nd hand, kids…) + локальные специфичные минусы по итогам поиска;</li>
+          <li>создание базовой структуры кампаний:
+            <ul>
+              <li>1 брендовая поисковая кампания (cheap clicks, защита от конкурентов);</li>
+              <li>1 общая поисковая кампания на английском с большим количеством групп (см. ниже);</li>
+              <li>1 общая поисковая кампания на русском — отдельной кампанией, потому что русскоязычная аудитория Дубая ведёт себя иначе и нужен отдельный бюджет;</li>
+              <li>1 товарная кампания (Standard Shopping).</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="stage-why">
+          <b>Зачем русский и английский — отдельные кампании:</b> разный CPC, разная конкуренция, разные креативы.
+          В одной кампании Google «съест» бюджет в более дешёвый язык и заглушит второй — поэтому разносим.
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 3 -->
+    <div class="stage">
+      <div class="stage-head">
+        <div class="stage-num">03</div>
+        <div class="stage-title">Запуск первого этапа</div>
+        <div class="stage-meta">недели 1–2</div>
+      </div>
+      <div class="stage-body">
+        <p>Первой волной включаем:</p>
+        <ul>
+          <li>брендовый поиск;</li>
+          <li>общий поиск (RU и EN — отдельными кампаниями);</li>
+          <li>товарную кампанию.</li>
+        </ul>
+        <p><strong>Цель этапа</strong> — не сразу выйти в плюс, а собрать данные:</p>
+        <ul>
+          <li>какие поисковые запросы реально приводят добавления в корзину и покупки;</li>
+          <li>какие товары имеют лучший CTR / CR на товарной кампании;</li>
+          <li>как аудитория реагирует на бренд, категории и ассортимент.</li>
+        </ul>
+        <div class="stage-why">
+          <b>Почему так аккуратно:</b> fashion-ниша = длинный цикл принятия решения. Если на старте включить всё сразу
+          (PMax, баннеры, широкие группы), мы потратим бюджет до того, как алгоритм поймёт, что считать «хорошим» кликом.
+          Узкий старт = чистые данные = быстрее обучение.
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 4 -->
+    <div class="stage">
+      <div class="stage-head">
+        <div class="stage-num">04</div>
+        <div class="stage-title">Первичная оптимизация после запуска</div>
+        <div class="stage-meta">недели 2–4</div>
+      </div>
+      <div class="stage-body">
+        <ul>
+          <li>чистка поисковых запросов (Search Terms): мусорные / нецелевые отправляем в минус-листы;</li>
+          <li>пополнение минус-слов общих и групповых;</li>
+          <li>корректировка ставок по устройствам, времени, аудиториям;</li>
+          <li>анализ товарных позиций — лучшие модели поднимаем в приоритет, слабые временно отключаем;</li>
+          <li>перераспределение бюджета в пользу более сильных групп и товаров.</li>
+        </ul>
+        <div class="stage-why">
+          <b>Что считаем «сильным»:</b> комбинация CR ≥ среднего по аккаунту, CPA в пределах целевого, достаточная частотность (≥ 10–15 кликов в неделю).
+          Решения принимаем не на 3 кликах — на статзначимых выборках.
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 5 -->
+    <div class="stage">
+      <div class="stage-head">
+        <div class="stage-num">05</div>
+        <div class="stage-title">Второй этап — подключение PMax</div>
+        <div class="stage-meta">после накопления данных</div>
+      </div>
+      <div class="stage-body">
+        <p>Когда у нас уже есть рабочая статистика и стабильные конверсии с поиска и Shopping — запускаем Performance Max:</p>
+        <ul>
+          <li>PMax с feed-only (только товары) для расширения товарного спроса;</li>
+          <li>PMax с креативами и аудиториями по интересам — для верха воронки и ремаркетинга;</li>
+          <li>Display / баннерная реклама внутри PMax — на ремаркетинг и look-alike к покупателям.</li>
+        </ul>
+        <div class="stage-why">
+          <b>Почему PMax только сейчас:</b> PMax — «чёрный ящик», который хорошо работает только когда есть стабильный
+          поток конверсий для обучения. На пустом аккаунте PMax тратит бюджет на широкие охваты без результата.
+          Сначала набираем 30+ конверсий за 30 дней на поиске/Shopping, потом включаем PMax.
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 6 -->
+    <div class="stage">
+      <div class="stage-head">
+        <div class="stage-num">06</div>
+        <div class="stage-title">Дальнейшая работа</div>
+        <div class="stage-meta">постоянно</div>
+      </div>
+      <div class="stage-body">
+        <ul>
+          <li>анализ эффективности кампаний (еженедельно — оперативные правки, ежемесячно — стратегические);</li>
+          <li>тестирование новых групп ключей и новых товарных подборок;</li>
+          <li>обновление объявлений и креативов (в fashion креативы выгорают быстро — раз в 4–6 недель);</li>
+          <li>масштабирование рабочих связок: лучшие группы переводим в отдельные кампании с собственным бюджетом;</li>
+          <li>постепенное усиление направлений, дающих лучший ROAS.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: KEYWORD GROUPS -->
+  <section class="section">
+    <div class="section-eyebrow">Шаг 3 · Структура общей поисковой кампании</div>
+    <h2 class="section-title">Группы объявлений и ключевые запросы</h2>
+    <p class="section-lead">
+      Делим общий поиск на 8 групп — каждая закрывает свой тип интента. Это даёт возможность писать заголовки
+      под конкретный запрос, ставить ставки точечно и видеть, какой именно intent работает.
+    </p>
+
+    <div class="kw-grid">
+
+      <div class="kw-card">
+        <div class="kw-head"><span class="kw-num">Группа 1</span><span class="kw-tag">premium</span></div>
+        <div class="kw-title">Designer bags Dubai</div>
+        <div class="kw-intent">Бренд-сегмент — ищут не модель, а уровень.</div>
+        <ul class="kw-keys">
+          <li>designer bags dubai</li>
+          <li>designer handbags dubai</li>
+          <li>premium bags dubai</li>
+          <li>women's designer bags dubai</li>
+          <li>minimalist bags dubai</li>
+        </ul>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-head"><span class="kw-num">Группа 2</span><span class="kw-tag">broad</span></div>
+        <div class="kw-title">Women's bags Dubai</div>
+        <div class="kw-intent">Шире, но всё ещё коммерческий запрос.</div>
+        <ul class="kw-keys">
+          <li>women's bags dubai</li>
+          <li>women's handbags dubai</li>
+          <li>buy women's bag dubai</li>
+          <li>women's shoulder bags dubai</li>
+          <li>ladies bags dubai</li>
+        </ul>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-head"><span class="kw-num">Группа 3</span><span class="kw-tag">model</span></div>
+        <div class="kw-title">Shopper bag</div>
+        <div class="kw-intent">Под крупные модели в ассортименте.</div>
+        <ul class="kw-keys">
+          <li>shopper bag dubai</li>
+          <li>women's shopper bag dubai</li>
+          <li>large shopper bag dubai</li>
+          <li>structured shopper bag</li>
+          <li>black shopper bag dubai</li>
+        </ul>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-head"><span class="kw-num">Группа 4</span><span class="kw-tag">model</span></div>
+        <div class="kw-title">Tote bag</div>
+        <div class="kw-intent">Tote как более собранная форма.</div>
+        <ul class="kw-keys">
+          <li>tote bag dubai</li>
+          <li>women's tote bag dubai</li>
+          <li>black tote bag dubai</li>
+          <li>structured tote bag</li>
+          <li>designer tote bag dubai</li>
+        </ul>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-head"><span class="kw-num">Группа 5</span><span class="kw-tag">fashion-intent</span></div>
+        <div class="kw-title">Baguette bag</div>
+        <div class="kw-intent">Самый визуально считываемый fashion-тип.</div>
+        <ul class="kw-keys">
+          <li>baguette bag dubai</li>
+          <li>shoulder baguette bag</li>
+          <li>women's baguette bag dubai</li>
+          <li>black baguette bag dubai</li>
+          <li>designer baguette bag</li>
+        </ul>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-head"><span class="kw-num">Группа 6</span><span class="kw-tag">compact</span></div>
+        <div class="kw-title">Mini bag / mini shopper</div>
+        <div class="kw-intent">Под компактные модели и вечерний use case.</div>
+        <ul class="kw-keys">
+          <li>mini bag dubai</li>
+          <li>mini shopper bag dubai</li>
+          <li>small women's bag dubai</li>
+          <li>compact bag for women</li>
+          <li>mini shoulder bag dubai</li>
+        </ul>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-head"><span class="kw-num">Группа 7</span><span class="kw-tag">use case</span></div>
+        <div class="kw-title">Work / laptop bag</div>
+        <div class="kw-intent">На карточках shopper и tote указано laptop + documents.</div>
+        <ul class="kw-keys">
+          <li>women's laptop bag dubai</li>
+          <li>work bag for women dubai</li>
+          <li>designer work bag dubai</li>
+          <li>women's bag for documents</li>
+          <li>a4 women's bag dubai</li>
+        </ul>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-head"><span class="kw-num">Группа 8</span><span class="kw-tag">use case</span></div>
+        <div class="kw-title">Crossbody / strap use</div>
+        <div class="kw-intent">У shopper и tote есть strap — носится crossbody.</div>
+        <ul class="kw-keys">
+          <li>crossbody bag dubai</li>
+          <li>women's crossbody bag dubai</li>
+          <li>structured crossbody bag</li>
+          <li>designer crossbody bag dubai</li>
+          <li>black crossbody bag dubai</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: DON'T -->
+  <section class="section">
+    <div class="section-eyebrow">Что НЕ делаем на старте</div>
+    <h2 class="section-title">Куда не идём, чтобы не размыть бюджет</h2>
+    <div class="dont">
+      <div class="dont-title">На старте оставляем за скобками</div>
+      <ul>
+        <li><strong>Очень широкие fashion-запросы</strong> вроде <code>best bags 2026</code> — это вершина воронки, дорогой клик, конверсия ≈ 0;</li>
+        <li><strong>Luxury alternatives</strong> (<code>chanel alternative</code>, <code>dior dupes</code>) — аудитория шопит копии, не премиальный бренд;</li>
+        <li><strong>Конкуренты по бренду</strong> (Coccinelle, Furla, Charles &amp; Keith и т.п.) — дорого, низкий CR, плюс юридические риски с trademark в текстах объявлений.</li>
+      </ul>
+      <p>Всё это можно протестировать позже, когда уже понятно, что окупается на «горячем» интенте. На старте это размывает трафик и медленно учит алгоритм.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5: LAYERS -->
+  <section class="section">
+    <div class="section-eyebrow">Шаг 4 · Охват</div>
+    <h2 class="section-title">Как охватить больше целевой аудитории — без мусора</h2>
+    <p class="section-lead">
+      Охват строим в три слоя интента. Не одна широкая группа «women's bags», а три уровня температуры —
+      от самой тёплой к более широкой, но всё ещё целевой.
+    </p>
+
+    <div class="layers">
+      <div class="layer">
+        <div class="layer-num">1</div>
+        <div class="layer-body">
+          <div class="layer-title">Самый тёплый <span>низкий CPC, высокий CR</span></div>
+          <div class="layer-desc">Бренд + брендовые категории. Те, кто уже знает MIROSHNIKOV или ищет конкретный бренд-сегмент.</div>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="layer-num">2</div>
+        <div class="layer-body">
+          <div class="layer-title">Самый ценный небрендовый <span>основной объём продаж</span></div>
+          <div class="layer-desc">Shopper / Tote / Baguette / Mini / Work bag / Crossbody — конкретный тип сумки + Dubai.</div>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="layer-num">3</div>
+        <div class="layer-body">
+          <div class="layer-title">Шире, но всё ещё целевой <span>верх воронки</span></div>
+          <div class="layer-desc">Designer bags Dubai / Women's bags Dubai / Premium handbags Dubai — холодный спрос внутри ниши.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: AUDIENCES -->
+  <section class="section">
+    <div class="section-eyebrow">Шаг 5 · PMax-аудитории</div>
+    <h2 class="section-title">Что тестируем в PMax по интересам</h2>
+    <p class="section-lead">
+      В PMax помимо аудитории, которая уже работает на поиске, отдельно тестируем сегменты по интересам.
+      Это нужно, чтобы охватить не только сформированный спрос, но и тех, кто потенциально подходит нам
+      по стилю, потребностям и поведению.
+    </p>
+
+    <div class="aud-grid">
+      <div class="aud-card">
+        <div class="aud-head">Сегмент 1</div>
+        <div class="aud-title">Designer / premium bags</div>
+        <ul>
+          <li>designer bags</li>
+          <li>premium handbags</li>
+          <li>luxury bags</li>
+          <li>women's designer bags</li>
+          <li>premium women's accessories</li>
+        </ul>
+      </div>
+      <div class="aud-card">
+        <div class="aud-head">Сегмент 2</div>
+        <div class="aud-title">Everyday women's bags</div>
+        <ul>
+          <li>women's bags</li>
+          <li>everyday handbag</li>
+          <li>women's handbags</li>
+          <li>stylish women's bags</li>
+          <li>minimalist handbags</li>
+        </ul>
+      </div>
+      <div class="aud-card">
+        <div class="aud-head">Сегмент 3</div>
+        <div class="aud-title">Shopper / Tote / Work bag</div>
+        <ul>
+          <li>shopper bag</li>
+          <li>tote bag</li>
+          <li>work bag for women</li>
+          <li>women's laptop bag</li>
+          <li>structured tote bag</li>
+        </ul>
+      </div>
+      <div class="aud-card">
+        <div class="aud-head">Сегмент 4</div>
+        <div class="aud-title">Baguette / Mini / Compact</div>
+        <ul>
+          <li>baguette bag</li>
+          <li>mini bag</li>
+          <li>small shoulder bag</li>
+          <li>compact handbag</li>
+          <li>mini shoulder bag</li>
+        </ul>
+      </div>
+      <div class="aud-card">
+        <div class="aud-head">Сегмент 5</div>
+        <div class="aud-title">Fashion / style accessories</div>
+        <ul>
+          <li>fashion accessories</li>
+          <li>women's fashion style</li>
+          <li>minimalist fashion</li>
+          <li>modern women's style</li>
+          <li>premium fashion accessories</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section class="section">
+    <div class="section-eyebrow">Шаг 6 · Бюджет</div>
+    <h2 class="section-title">Просчёт рекламного бюджета</h2>
+    <p class="section-lead budget-lead">
+      Бюджет считаем не «от ощущения», а от цели. Сначала фиксируем, сколько продаж нужно в месяц
+      и какой допустимый CPA (стоимость одной продажи). Дальше идём от формулы.
+      Точные цифры CPC и CR подтянем на 2-м этапе из Keyword Planner forecast и первых данных запуска —
+      сейчас даём рамки, по которым клиент уже может ориентироваться.
+    </p>
+
+    <!-- Formula -->
+    <div class="formula">
+      <div class="formula-label">Базовая формула</div>
+      <div class="formula-expr">
+        Бюджет/мес  ≈  <b>(целевое число продаж)</b>  ×  <b>(средний CPC ÷ средняя CR)</b>
+      </div>
+      <div class="formula-note">
+        Где <b>CR</b> — доля кликов, доходящих до покупки. Для холодного fashion-трафика в первый месяц это
+        обычно 0.3–0.8 %, для брендового поиска и ремаркетинга — кратно выше. Поэтому каждая кампания
+        считается отдельно, а не «средней температурой по аккаунту».
+      </div>
+    </div>
+
+    <!-- Allocation -->
+    <h3 style="font-size:15px; letter-spacing:1.5px; text-transform:uppercase; color:#8a7e6b; margin-bottom:14px; font-weight:600;">
+      Распределение по типам кампаний (1-й месяц)
+    </h3>
+    <div class="split-grid">
+
+      <div class="split-card">
+        <div class="split-pct">8<span>%</span></div>
+        <div class="split-name">Брендовый поиск</div>
+        <div class="split-why">Дёшево, высокий CR. Защищает бренд от перехвата конкурентами.</div>
+        <div class="split-bar" style="width:8%;"></div>
+      </div>
+
+      <div class="split-card">
+        <div class="split-pct">35<span>%</span></div>
+        <div class="split-name">Общий поиск · EN</div>
+        <div class="split-why">Основной коммерческий канал в Дубае. 8 групп ключей — bulk бюджета.</div>
+        <div class="split-bar" style="width:35%;"></div>
+      </div>
+
+      <div class="split-card">
+        <div class="split-pct">12<span>%</span></div>
+        <div class="split-name">Общий поиск · RU</div>
+        <div class="split-why">Русскоязычная аудитория UAE — меньше объём, но выше платёжеспособность.</div>
+        <div class="split-bar" style="width:12%;"></div>
+      </div>
+
+      <div class="split-card">
+        <div class="split-pct">35<span>%</span></div>
+        <div class="split-name">Shopping (товарная)</div>
+        <div class="split-why">Карточки с ценами и фото — лучший CR на холодный спрос в e-com.</div>
+        <div class="split-bar" style="width:35%;"></div>
+      </div>
+
+      <div class="split-card">
+        <div class="split-pct">10<span>%</span></div>
+        <div class="split-name">Резерв на тесты</div>
+        <div class="split-why">Новые ключи, новые группы, A/B заголовков и креативов.</div>
+        <div class="split-bar" style="width:10%;"></div>
+      </div>
+
+    </div>
+    <p style="font-size:13.5px; color:#6b6256; margin-bottom:24px; font-style:italic;">
+      Со 2-го месяца к этим долям добавляется <b>PMax (+25–35 % сверху от стартового бюджета)</b> —
+      когда уже накоплено достаточно конверсий для обучения алгоритма.
+    </p>
+
+    <!-- Budget notes -->
+    <div class="budget-notes">
+
+      <div class="budget-note">
+        <div class="budget-note-label">Минимум для старта</div>
+        <div class="budget-note-title">Сколько нужно, чтобы кампания вообще обучилась</div>
+        <p>
+          Google Ads нормально оптимизируется, когда набирается <b>≥ 30 конверсий за 30 дней</b> на каждую кампанию,
+          использующую Smart Bidding. Это нижняя планка: меньше — алгоритм работает на шуме, а не на данных.
+        </p>
+        <p style="margin-top:8px;">
+          Конкретный минимум в дирхамах/долларах считается из forecast после 2-го этапа.
+          На практике для премиум-fashion в Дубае стартовый бюджет ниже определённой суммы
+          означает «слишком мало кликов, чтобы что-то понять» — лучше отложить запуск, чем лить полумеры.
+        </p>
+      </div>
+
+      <div class="budget-note">
+        <div class="budget-note-label">Когда пересчитываем</div>
+        <div class="budget-note-title">Бюджет — не фикс, а функция от данных</div>
+        <ul>
+          <li><b>Через 14 дней</b> — первая корректировка: убираем неработающие группы, перераспределяем в работающие.</li>
+          <li><b>Через 30 дней</b> — полный пересчёт по факту: реальный CPC, реальная CR, реальный CPA.</li>
+          <li><b>Перед PMax (~60 дней)</b> — увеличение бюджета на 25–35 %, чтобы PMax-у было где учиться.</li>
+          <li><b>Сезонные пики</b> (Ramadan, GITEX, DSF, NY) — отдельный план повышения ставок и бюджета.</li>
+        </ul>
+      </div>
+
+      <div class="budget-note">
+        <div class="budget-note-label">Что в бюджет не входит</div>
+        <div class="budget-note-title">Отдельные статьи</div>
+        <ul>
+          <li>работа по настройке и ведению кампаний;</li>
+          <li>правки сайта (Refund policy, SEO, ускорение);</li>
+          <li>съёмки и создание креативов для PMax и баннеров;</li>
+          <li>интеграция аналитики (GTM/GA4/Merchant Center) — разовая работа на 1-м этапе;</li>
+          <li>сторонние сервисы (если нужны — Looker Studio, Triple Whale и т.п.).</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPECTATION -->
+  <section class="section">
+    <div class="expect">
+      <div class="expect-eyebrow">Реалистичные ожидания</div>
+      <h3>Что мы видим в первые недели — и почему это нормально</h3>
+      <p>
+        Fashion-покупка — не импульс, особенно в премиальном сегменте. Средний путь до покупки в этой нише
+        обычно <strong>несколько визитов через 2–6 недель</strong>: первое касание — узнавание, второе — изучение,
+        третье и далее — покупка. Поэтому на первый месяц задача — не «выйти на ROAS X», а собрать чистые данные.
+      </p>
+      <p>
+        Реальные продажи начинают накапливаться, когда подключается ремаркетинг и PMax — то есть когда аудитория
+        первого месяца возвращается на сайт уже с тёплым касанием. Поэтому <strong>5-й этап (PMax)</strong> —
+        переломный, а не 1–2.
+      </p>
+      <div class="expect-grid">
+        <div>
+          <div class="expect-item-label">Недели 1–2</div>
+          <div class="expect-item-value">Сбор данных, чистые запуски</div>
+        </div>
+        <div>
+          <div class="expect-item-label">Недели 3–4</div>
+          <div class="expect-item-value">Оптимизация, первые продажи</div>
+        </div>
+        <div>
+          <div class="expect-item-label">Недели 5–8</div>
+          <div class="expect-item-value">PMax, ремаркетинг, рост</div>
+        </div>
+        <div>
+          <div class="expect-item-label">2-й месяц+</div>
+          <div class="expect-item-value">Масштабирование рабочих связок</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    Подготовлено для miroshnikov.ae · 27 мая 2026
+  </div>
+
+</main>
+
+</body>
+</html>
